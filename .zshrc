@@ -7,7 +7,7 @@ parse_git_branch() {
 setopt PROMPT_SUBST
 
 update_prompt() {
-    PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$fg[blue]%}$(parse_git_branch)%  %{$fg[yellow]%}%~ %{$reset_color%}%% "
+    PS1="%{$fg_bold[red]%}%n%{$reset_color%}@%{$fg_bold[green]%}%m%{$fg_bold[magenta]%}$(parse_git_branch)%  %{$fg[yellow]%}%~ %{$reset_color%}%% "
 }
 
 add-zsh-hook chpwd update_prompt
